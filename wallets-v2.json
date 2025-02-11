@@ -90,7 +90,7 @@
       {
         "name": "SignData",
         "types": ["text", "binary", "cell"]
-      }  
+      }
     ]
   },
   {
@@ -223,7 +223,7 @@
         "extraCurrencySupported": false
       }
     ]
-  },  
+  },
   {
     "app_name": "hot",
     "name": "HOT",
@@ -696,7 +696,7 @@
     "about_url": "https://token.im",
     "universal_url": "https://connect.token.im/link/ton-connect",
     "deepLink": "imtokenv2://link/ton-connect",
-    "bridge": [ 
+    "bridge": [
        {
           "type": "sse",
           "url": "https://connect.token.im/tonbridge"
@@ -819,7 +819,7 @@
     "about_url": "https://stower.money",
     "universal_url": "https://connect.stower.money",
     "deepLink": "stower-tc://",
-    "bridge": [ 
+    "bridge": [
        {
           "type": "sse",
           "url": "https://bridge.stower.money/bridge"
@@ -837,5 +837,23 @@
         "types": ["text", "binary", "cell"]
       }
     ]
-  }
+  },
+  {
+  "app_name": "walletverse",
+  "name": "Walletverse",
+  "image": "https://bridge.walletverse.io/logo.png",
+  "about_url": "https://walletverse.io",
+  "universal_url": "https://bridge.walletverse.io/tonconnect",
+  "bridge": [
+     {
+        "type": "sse",
+        "url": "https://bridge.walletverse.io/sse/bridge"
+     },
+     {
+        "type": "js",
+        "key": "walletverse"
+     }
+  ],
+  "platforms": ["ios", "android"]
+ }
 ]
