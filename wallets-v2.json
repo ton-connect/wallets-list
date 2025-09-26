@@ -811,5 +811,27 @@
         "extraCurrencySupported": false
       }
     ]
+  },
+  {
+    "app_name": "stower",
+    "name": "STOWER",
+    "image": "https://assets.stower.money/STOWER-logo_288x288.png",
+    "about_url": "https://stower.money",
+    "universal_url": "https://connect.stower.money",
+    "deepLink": "stower-tc://",
+    "bridge": [ 
+       {
+          "type": "sse",
+          "url": "https://bridge.stower.money/bridge"
+       }
+    ],
+    "platforms": ["ios", "android"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
