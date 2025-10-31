@@ -175,27 +175,6 @@
     ]
   },
   {
-    "app_name": "fintopio-tg",
-    "name": "Fintopio",
-    "image": "https://raw.githubusercontent.com/fintopio/ton-pub/refs/heads/main/logos/tonconnect-icon.png",
-    "about_url": "https://fintopio.com",
-    "universal_url": "https://t.me/fintopio?attach=wallet",
-    "bridge": [
-      {
-        "type": "sse",
-        "url": "https://wallet-bridge.fintopio.com/bridge"
-      }
-    ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 4,
-        "extraCurrencySupported": false
-      }
-    ]
-  },
-  {
     "app_name": "okxWallet",
     "name": "OKX Wallet",
     "image": "https://static.okx.com/cdn/web3/assets/imgs/70d223c0-8527-40c1-8292-b3cc10b53d88.png",
