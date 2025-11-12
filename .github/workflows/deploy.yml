@@ -21,18 +21,22 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment: Release
     steps:
       - name: Run deployment wf
+        env:
+          RUN_NAME: ${{ format('Deploy {0} / {1} / {2}', vars.APP_NAME, needs.build.outputs.component || '-', needs.build.outputs.image_tag) }}
         uses: the-actions-org/workflow-dispatch@v4
         with:
+          run-name: ${{ env.RUN_NAME }}
           workflow: deploy-v2.yml
           ref: main
           repo: ${{ vars.DEPLOY_REPO }}
           token: ${{ secrets.DEPLOY_REPO_TOKEN }}
           inputs: |
             {
-              "app_name": "ton-blockchain/wallets-list",
+              "app_name": "${{ vars.APP_NAME }}",
               "image_tag": "${{ needs.build.outputs.image_tag }}",
-              "image_digest": "${{ needs.build.outputs.image_digest }}"
+              "image_digest": "${{ needs.build.outputs.image_digest }}",
+              "image_revision": "${{ needs.build.outputs.image_revision || github.sha }}",
+              "run_name": "${{ env.RUN_NAME }}"
             }
