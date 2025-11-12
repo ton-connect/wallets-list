@@ -778,6 +778,13 @@
         "key": "defiway"
       }
     ],
-    "platforms": ["ios", "chrome", "safari"]
+    "platforms": ["ios", "chrome", "safari"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
