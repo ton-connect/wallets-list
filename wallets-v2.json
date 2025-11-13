@@ -760,5 +760,44 @@
         "extraCurrencySupported": false
       }
     ]
+  },
+  {
+    "app_name": "orniton",
+    "name": "Orniton",
+    "image": "https://bridge.orniton.org/wallet_logo_288.png",
+    "about_url": "https://orniton.org",
+    "universal_url": "https://t.me/Ornitonbot?attach=wallet",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://bridge.orniton.org/bridge"
+      },
+      {
+        "type": "js",
+        "key": "orniton"
+      }
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": true
+      },
+      {
+        "name": "SignData",
+        "types": [
+          "text",
+          "binary",
+          "cell"
+        ]
+      }
+    ]
   }
 ]
