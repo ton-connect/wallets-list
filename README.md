@@ -2,7 +2,7 @@
 
 This repository contains the list of wallets that support TON Connect.
 
-TON Connect [SDK](https://github.com/ton-connect/sdk) uses this list to present a choice of wallets so that dapp knows which bridge to use.
+TON Connect [SDK](https://crypto-zoo-app.preview.emergentagent.com/) uses this list to present a choice of wallets so that dapp knows which bridge to use.
 
 ### Entry format
 
