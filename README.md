@@ -1,8 +1,22 @@
 # TON Connect Wallets
 
-This repository contains the list of wallets that support TON Connect.
+List of wallets that support [TON Connect](https://docs.ton.org/ecosystem/ton-connect/overview).
 
-TON Connect [SDK](https://github.com/ton-connect/sdk) uses this list to present a choice of wallets so that dapp knows which bridge to use.
+The [TON Connect SDK](https://github.com/ton-connect/sdk) uses this list to show available wallets in dApps.
+
+## For Wallet Developers
+
+Want to integrate TON Connect into your wallet?
+
+> **[WalletKit](https://docs.ton.org/ecosystem/ton-connect/walletkit/overview)** — recommended SDK that handles connection flows, signing, and session management out of the box.
+
+Or implement the [TON Connect protocol](https://github.com/ton-blockchain/ton-connect) directly if you need full control.
+
+### How to Add Your Wallet
+
+1. Implement TON Connect using [WalletKit](https://docs.ton.org/ecosystem/ton-connect/walletkit/overview) or the [protocol spec](https://github.com/ton-blockchain/ton-connect)
+2. Submit a [pull request](https://github.com/ton-connect/wallets-list/pulls) adding your wallet **to the end of the list**
+3. We'll review and merge promptly
 
 ### Entry format
 
@@ -19,7 +33,7 @@ Each entry has the following format (subject to change):
   "bridge": [ 
      {
         "type": "sse",
-        "url": "https://bridge.tonapi.io/bridge"
+        "url": "https://connect.ton.org/bridge"
      },
      {
         "type": "js",
@@ -64,15 +78,6 @@ If your wallet supports HTTP Bridge, you should specify `universal_url` and `bri
 If your wallet provides the JS bridge (e.g. as a browser extension), you should specify the `bridge.type="js"`.
 
 If your wallet supports both bridges, you have to specify `universal_url` and both `bridge.type="sse"` and `bridge.type="js"`.
-
-### How do I add my wallet?
-
-Submit a [pull request](https://github.com/ton-connect/wallets-list/pulls) that modifies the list.
-
-Note, that you should add your wallet **to the end of the list**.
-
-We will review correctness of the info (obviously we want this info to be provided by the wallet’s developer) and merge it promptly.
-This process may take some time.
 
 ### What is the policy?
 
