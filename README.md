@@ -27,33 +27,23 @@ Each entry has the following format (subject to change):
   "app_name": "tonkeeper",
   "name": "Tonkeeper",
   "image": "https://tonkeeper.com/assets/tonconnect-icon.png",
-  "tondns":  "tonkeeper.ton",
+  "tondns": "tonkeeper.ton",
   "about_url": "https://tonkeeper.com",
   "universal_url": "https://app.tonkeeper.com/ton-connect",
-  "bridge": [ 
-     {
-        "type": "sse",
-        "url": "https://connect.ton.org/bridge"
-     },
-     {
-        "type": "js",
-        "key": "tonkeeper"
-     }
+  "deepLink": "tonkeeper-tc://",
+  "bridge": [
+     { "type": "sse", "url": "https://connect.ton.org/bridge" },
+     { "type": "js", "key": "tonkeeper" }
   ],
   "platforms": ["ios", "android", "chrome", "firefox", "safari", "windows", "macos", "linux"],
   "features": [
-    {
-      "name": "SendTransaction",
-      "maxMessages": 4,
-      "extraCurrencySupported": false
-    },
-    {
-      "name": "SignData",
-      "types": ["text", "binary", "cell"]
-    }
+    { "name": "SendTransaction", "maxMessages": 4, "extraCurrencySupported": false },
+    { "name": "SignData", "types": ["text", "binary", "cell"] }
   ]
 }
 ```
+
+Full specification: [wallets-v2.schema.json](wallets-v2.schema.json)
 
 #### Description
 - `app_name`: string ID of your wallet. Must be equal with `ConnectEventSuccess.device.appName` and js bridge `key`
@@ -61,10 +51,11 @@ Each entry has the following format (subject to change):
 - `image`: url to the icon of your wallet. Will be displayed in the dapp. Resolution 288×288px. On non-transparent background, without rounded corners. PNG format. Please, use OptinPNG (pngquan/ImageMagick/TinyPNG) to reduce bandwidth.
 - `tondns`: (optional) will be used in the protocol later.
 - `about_url`: info or landing page of your wallet. May be useful for TON newcomers.
-- `universal_url`: (strictly required for `sse` bridges, optional otherwise) base part of your wallet universal url. Your link should support [Ton Connect parameters](https://github.com/ton-connect/docs/blob/main/bridge.md#universal-link)
+- `universal_url`: (strictly required for `sse` bridges, optional otherwise) base part of your wallet universal url. Your link should support [Ton Connect parameters](https://github.com/ton-blockchain/ton-connect/blob/main/bridge.md#universal-link)
+- `deepLink`: (strictly required for `sse` bridges, optional otherwise) native app URL scheme for direct app opening (e.g., `tonkeeper-tc://`). Your link should support [Ton Connect parameters](https://github.com/ton-blockchain/ton-connect/blob/main/bridge.md#universal-link)
 - `bridge`: options for connectivity between the app and the wallet
-    - `type="sse"`: specify the `url` of your wallet's implementation of the [HTTP bridge](https://github.com/ton-connect/docs/blob/main/bridge.md#http-bridge).
-    - `type="js"`: specify the `key` through which your wallet handles [JS Bridge](https://github.com/ton-connect/docs/blob/main/bridge.md#js-bridge) connection, specify the binding for your bridge object accessible through `window`. Example: the key `"tonkeeper"` means the bridge can be accessed as `window.tonkeeper`.
+    - `type="sse"`: specify the `url` of your wallet's implementation of the [HTTP bridge](https://github.com/ton-blockchain/ton-connect/blob/main/bridge.md#http-bridge).
+    - `type="js"`: specify the `key` through which your wallet handles [JS Bridge](https://github.com/ton-blockchain/ton-connect/blob/main/bridge.md#js-bridge) connection, specify the binding for your bridge object accessible through `window`. Example: the key `"tonkeeper"` means the bridge can be accessed as `window.tonkeeper`.
 - `platforms`: list of platforms on which your wallet works: mobile app "ios", "android"; desktop app "windows", "macos", "linux"; browser extension "chrome", "firefox", "safari".
 - `features`: list of supported TON Connect features and their capabilities:
     - `SendTransaction`: Transaction sending capability
@@ -73,11 +64,11 @@ Each entry has the following format (subject to change):
     - `SignData`: Data signing capability  
         - `types`: array of supported data types for signing: `"text"`, `"binary"`, `"cell"`
 
-If your wallet supports HTTP Bridge, you should specify `universal_url` and `bridge.type="sse"`.
+If your wallet supports HTTP Bridge, you should specify `universal_url`, `deepLink` and `bridge.type="sse"`.
 
 If your wallet provides the JS bridge (e.g. as a browser extension), you should specify the `bridge.type="js"`.
 
-If your wallet supports both bridges, you have to specify `universal_url` and both `bridge.type="sse"` and `bridge.type="js"`.
+If your wallet supports both bridges, you have to specify `universal_url`, `deepLink` and both `bridge.type="sse"` and `bridge.type="js"`.
 
 ### What is the policy?
 
