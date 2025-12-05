@@ -6,11 +6,7 @@ The [TON Connect SDK](https://github.com/ton-connect/sdk) uses this list to show
 
 ## For Wallet Developers
 
-Want to integrate TON Connect into your wallet?
-
-> **[WalletKit](https://docs.ton.org/ecosystem/ton-connect/walletkit/overview)** — recommended SDK that handles connection flows, signing, and session management out of the box.
-
-Or implement the [TON Connect protocol](https://github.com/ton-blockchain/ton-connect) directly if you need full control.
+[WalletKit](https://docs.ton.org/ecosystem/ton-connect/walletkit/overview) is the easiest way to integrate TON and TON Connect — it handles connection flows, signing, and session management for you. Or for full control, implement the [TON Connect protocol](https://github.com/ton-blockchain/ton-connect) directly.
 
 ### How to Add Your Wallet
 
