@@ -786,5 +786,25 @@
         "extraCurrencySupported": false
       }
     ]
+  },
+  {
+    "app_name": "trustwalletTon",
+    "name": "Trust",
+    "image": "https://assets-cdn.trustwallet.com/dapps/trust.logo.png",
+    "about_url": "https://trustwallet.com",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "trustwalletTon"
+      }
+    ],
+    "platforms": ["chrome"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
