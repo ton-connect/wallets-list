@@ -20,6 +20,8 @@ on:
         value: ${{ jobs.build.outputs.image_tag }}
       image_digest:
         value: ${{ jobs.build.outputs.image_digest }}
+      image_revision:
+        value: ${{ jobs.build.outputs.image_revision }}
       component:
         value: ${{ jobs.build.outputs.component }}
 
@@ -39,6 +41,7 @@ jobs:
       image_repo: ghcr.io/${{ steps.params.outputs.repository }}
       image_tag: ${{ steps.params.outputs.tag }}
       image_digest: ${{ steps.build.outputs.digest }}
+      image_revision: ${{ steps.revision.outputs.revision }}
       component: ${{ steps.params.outputs.component }}
 
     steps:
@@ -63,6 +66,11 @@ jobs:
           fetch-depth: 0
           submodules: recursive
           ref: ${{ env.REF_NAME }}
+
+      - name: Resolve revision
+        id: revision
+        run: |
+          echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v3
