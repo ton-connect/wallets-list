@@ -786,5 +786,30 @@
         "extraCurrencySupported": false
       }
     ]
+  },
+  {
+    "app_name": "sparx",
+    "name": "SparX Wallet",
+    "image": "https://raw.githubusercontent.com/broxus/sparx-networks/refs/heads/master/icons/sparx/sparx.png",
+    "about_url": "https://sparxwallet.com",
+    "universal_url": "https://l.sparxwallet.com",
+    "bridge": [
+        {
+            "type": "js",
+            "key": "sparx"
+        },
+        {
+        "type": "sse",
+        "url": "https://connect.ton.org/bridge"
+        }
+    ],
+    "platforms": ["ios", "android", "chrome", "firefox"],
+      "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
