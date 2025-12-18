@@ -90,7 +90,7 @@
       {
         "name": "SignData",
         "types": ["text", "binary", "cell"]
-      }  
+      }
     ]
   },
   {
@@ -223,7 +223,7 @@
         "extraCurrencySupported": false
       }
     ]
-  },  
+  },
   {
     "app_name": "hot",
     "name": "HOT",
@@ -696,7 +696,7 @@
     "about_url": "https://token.im",
     "universal_url": "https://connect.token.im/link/ton-connect",
     "deepLink": "imtokenv2://link/ton-connect",
-    "bridge": [ 
+    "bridge": [
        {
           "type": "sse",
           "url": "https://connect.token.im/tonbridge"
@@ -779,6 +779,31 @@
       }
     ],
     "platforms": ["ios", "chrome", "safari"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
+  },
+  {
+    "app_name": "guarda",
+    "name": "Guarda Wallet",
+    "image": "https://raw.githubusercontent.com/guardaco/assets/master/guarda.png",
+    "about_url": "https://guarda.com/",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "guarda"
+      },
+      {
+        "type": "sse",
+        "url": "https://bridge.tonapi.io/bridge"
+      }
+    ],
+    "platforms": ["chrome"],
+    "universal_url": "https://guarda.com/ton-connect",
     "features": [
       {
         "name": "SendTransaction",
