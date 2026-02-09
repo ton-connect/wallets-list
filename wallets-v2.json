@@ -788,10 +788,36 @@
     ]
   },
   {
+    "app_name": "sparx",
+    "name": "SparX Wallet",
+    "image": "https://raw.githubusercontent.com/broxus/sparx-networks/refs/heads/master/icons/sparx/sparx.png",
+    "about_url": "https://sparxwallet.com",
+    "universal_url": "https://l.sparxwallet.com",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "sparx"
+      },
+      {
+        "type": "sse",
+        "url": "https://connect.ton.org/bridge"
+      }
+    ],
+    "platforms": ["android", "chrome", "firefox", "ios"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": false
+      }
+    ]
+  },
+  {
     "app_name": "guarda",
     "name": "Guarda Wallet",
     "image": "https://raw.githubusercontent.com/guardaco/assets/master/guarda.png",
     "about_url": "https://guarda.com/",
+    "universal_url": "https://guarda.com/ton-connect",
     "bridge": [
       {
         "type": "js",
@@ -803,7 +829,6 @@
       }
     ],
     "platforms": ["chrome"],
-    "universal_url": "https://guarda.com/ton-connect",
     "features": [
       {
         "name": "SendTransaction",
