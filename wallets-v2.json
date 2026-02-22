@@ -11,7 +11,13 @@
         "url": "https://walletbot.me/tonconnect-bridge/bridge"
       }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -20,7 +26,11 @@
       },
       {
         "name": "SignData",
-        "types": ["text", "binary", "cell"]
+        "types": [
+          "text",
+          "binary",
+          "cell"
+        ]
       }
     ]
   },
@@ -42,7 +52,15 @@
         "key": "tonkeeper"
       }
     ],
-    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "chrome",
+      "firefox",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -51,7 +69,11 @@
       },
       {
         "name": "SignData",
-        "types": ["text", "binary", "cell"]
+        "types": [
+          "text",
+          "binary",
+          "cell"
+        ]
       }
     ]
   },
@@ -89,8 +111,12 @@
       },
       {
         "name": "SignData",
-        "types": ["text", "binary", "cell"]
-      }  
+        "types": [
+          "text",
+          "binary",
+          "cell"
+        ]
+      }
     ]
   },
   {
@@ -109,7 +135,10 @@
         "url": "https://connect.tonhubapi.com/tonconnect"
       }
     ],
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -118,7 +147,11 @@
       },
       {
         "name": "SignData",
-        "types": ["text", "binary", "cell"]
+        "types": [
+          "text",
+          "binary",
+          "cell"
+        ]
       }
     ]
   },
@@ -138,7 +171,11 @@
         "url": "https://ton-connect-bridge.bgwapi.io/bridge"
       }
     ],
-    "platforms": ["ios", "android", "chrome"],
+    "platforms": [
+      "ios",
+      "android",
+      "chrome"
+    ],
     "universal_url": "https://bkcode.vip/ton-connect",
     "features": [
       {
@@ -164,7 +201,14 @@
         "url": "https://wallet.binance.com/tonbridge/bridge"
       }
     ],
-    "platforms":  ["ios", "android", "macos", "windows", "linux", "chrome"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux",
+      "chrome"
+    ],
     "universal_url": "https://app.binance.com/cedefi/ton-connect",
     "features": [
       {
@@ -190,7 +234,13 @@
         "url": "https://web3.okx.com/tonbridge/discover/rpc/bridge"
       }
     ],
-    "platforms": ["chrome", "safari", "firefox", "ios", "android"],
+    "platforms": [
+      "chrome",
+      "safari",
+      "firefox",
+      "ios",
+      "android"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -215,7 +265,13 @@
         "url": "https://www.okx.com/tonbridge/discover/rpc/bridge"
       }
     ],
-    "platforms": ["chrome", "safari", "firefox", "ios", "android"],
+    "platforms": [
+      "chrome",
+      "safari",
+      "firefox",
+      "ios",
+      "android"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -223,7 +279,7 @@
         "extraCurrencySupported": false
       }
     ]
-  },  
+  },
   {
     "app_name": "hot",
     "name": "HOT",
@@ -240,7 +296,13 @@
         "key": "hotWallet"
       }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -266,7 +328,11 @@
         "url": "https://api-node.bybit.com/spot/api/web3/bridge/ton/bridge"
       }
     ],
-    "platforms": ["ios", "android", "chrome"],
+    "platforms": [
+      "ios",
+      "android",
+      "chrome"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -287,7 +353,13 @@
         "url": "https://bridge.dewallet.pro/bridge"
       }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -313,7 +385,12 @@
         "key": "safepalwallet"
       }
     ],
-    "platforms": ["ios", "android", "chrome", "firefox"],
+    "platforms": [
+      "ios",
+      "android",
+      "chrome",
+      "firefox"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -337,7 +414,10 @@
         "url": "https://dapp.gateio.services/tonbridge_api/bridge/v1"
       }
     ],
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "universal_url": "https://gate.onelink.me/Hls0/web3?gate_web3_wallet_universal_type=ton_connect",
     "features": [
       {
@@ -358,7 +438,9 @@
         "key": "openmask"
       }
     ],
-    "platforms": ["chrome"],
+    "platforms": [
+      "chrome"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -379,7 +461,13 @@
         "url": "https://ton-connect-bridge.bgwapi.io/bridge"
       }
     ],
-    "platforms": ["ios", "android", "windows", "macos", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "macos",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -399,7 +487,10 @@
         "key": "xtonwallet"
       }
     ],
-    "platforms": ["chrome", "firefox"],
+    "platforms": [
+      "chrome",
+      "firefox"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -419,7 +510,9 @@
         "key": "tonwallet"
       }
     ],
-    "platforms": ["chrome"],
+    "platforms": [
+      "chrome"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -440,7 +533,13 @@
         "url": "https://ton-connect-bridge.bgwapi.io/bridge"
       }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -461,7 +560,13 @@
         "url": "https://go-bridge.tomo.inc/bridge"
       }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -482,7 +587,13 @@
         "url": "https://bridge.mirai.app"
       }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -491,7 +602,11 @@
       },
       {
         "name": "SignData",
-        "types": ["text", "binary", "cell"]
+        "types": [
+          "text",
+          "binary",
+          "cell"
+        ]
       }
     ]
   },
@@ -507,7 +622,13 @@
         "url": "https://tc.architecton.su/bridge"
       }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -523,18 +644,18 @@
     "about_url": "https://www.tokenpocket.pro",
     "universal_url": "https://tp-lab.tptool.pro/ton-connect/",
     "bridge": [
-        {
-            "type": "js",
-            "key": "tokenpocket"
-        },
-        {
-            "type": "sse",
-            "url": "https://ton-connect.mytokenpocket.vip/bridge"
-        }
+      {
+        "type": "js",
+        "key": "tokenpocket"
+      },
+      {
+        "type": "sse",
+        "url": "https://ton-connect.mytokenpocket.vip/bridge"
+      }
     ],
     "platforms": [
-        "ios",
-        "android"
+      "ios",
+      "android"
     ],
     "features": [
       {
@@ -554,9 +675,15 @@
       {
         "type": "sse",
         "url": "https://bridge.uxuy.me/bridge"
-     }
+      }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -579,7 +706,12 @@
         "url": "https://bridge.tonapi.io/bridge"
       }
     ],
-    "platforms": ["ios", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -588,7 +720,11 @@
       },
       {
         "name": "SignData",
-        "types": ["text", "binary", "cell"]
+        "types": [
+          "text",
+          "binary",
+          "cell"
+        ]
       }
     ]
   },
@@ -638,7 +774,10 @@
         "url": "https://ton-connect-bridge.echooo.link/bridge"
       }
     ],
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -659,7 +798,13 @@
         "url": "https://blitzwallet.cfd/bridge/"
       }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -680,7 +825,13 @@
         "url": "https://web3-bridge.kolo.in/bridge"
       }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -696,17 +847,20 @@
     "about_url": "https://token.im",
     "universal_url": "https://connect.token.im/link/ton-connect",
     "deepLink": "imtokenv2://link/ton-connect",
-    "bridge": [ 
-       {
-          "type": "sse",
-          "url": "https://connect.token.im/tonbridge"
-       },
-       {
-          "type": "js",
-          "key": "imToken"
-       }
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://connect.token.im/tonbridge"
+      },
+      {
+        "type": "js",
+        "key": "imToken"
+      }
     ],
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -726,7 +880,9 @@
         "key": "cactuslink_ton"
       }
     ],
-    "platforms": ["chrome"],
+    "platforms": [
+      "chrome"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -734,11 +890,12 @@
         "extraCurrencySupported": false
       },
       {
-          "name": "SignData",
-          "types": [
-            "text", "binary"
-          ]
-        }
+        "name": "SignData",
+        "types": [
+          "text",
+          "binary"
+        ]
+      }
     ]
   },
   {
@@ -752,7 +909,9 @@
         "key": "onekeyTonWallet"
       }
     ],
-    "platforms": ["chrome"],
+    "platforms": [
+      "chrome"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -778,7 +937,11 @@
         "key": "defiway"
       }
     ],
-    "platforms": ["ios", "chrome", "safari"],
+    "platforms": [
+      "ios",
+      "chrome",
+      "safari"
+    ],
     "features": [
       {
         "name": "SendTransaction",
@@ -794,22 +957,59 @@
     "about_url": "https://sparxwallet.com",
     "universal_url": "https://l.sparxwallet.com",
     "bridge": [
-        {
-            "type": "js",
-            "key": "sparx"
-        },
-        {
+      {
+        "type": "js",
+        "key": "sparx"
+      },
+      {
         "type": "sse",
         "url": "https://connect.ton.org/bridge"
-        }
+      }
     ],
-    "platforms": ["ios", "android", "chrome", "firefox"],
-      "features": [
+    "platforms": [
+      "ios",
+      "android",
+      "chrome",
+      "firefox"
+    ],
+    "features": [
       {
         "name": "SendTransaction",
         "maxMessages": 255,
         "extraCurrencySupported": false
       }
     ]
+  },
+  {
+    "app_name": "nonada",
+    "name": "NoNada Wallet",
+    "image": "https://nonadawallet.com/icon-288.png",
+    "about_url": "https://nonadawallet.com",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "nonada"
+      },
+      {
+        "type": "sse",
+        "url": "https://bridge.tonapi.io/bridge"
+      }
+    ],
+    "platforms": [
+      "chrome",
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": false
+      }
+    ],
+    "universal_url": "https://t.me/NoNadaWalletBot?attach=wallet"
   }
 ]
