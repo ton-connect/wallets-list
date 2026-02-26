@@ -831,6 +831,10 @@
         "name": "SendTransaction",
         "maxMessages": 255,
         "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
       }
     ]
   }
