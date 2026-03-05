@@ -794,21 +794,47 @@
     "about_url": "https://sparxwallet.com",
     "universal_url": "https://l.sparxwallet.com",
     "bridge": [
-      {
-        "type": "js",
-        "key": "sparx"
-      },
-      {
+        {
+            "type": "js",
+            "key": "sparx"
+        },
+        {
         "type": "sse",
         "url": "https://connect.ton.org/bridge"
-      }
+        }
     ],
-    "platforms": ["android", "chrome", "firefox", "ios"],
+    "platforms": ["ios", "android", "chrome", "firefox"],
+      "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": false
+      }
+    ]
+  },
+  {
+    "app_name": "stower",
+    "name": "STOWER",
+    "image": "https://assets.stower.money/STOWER-logo_288x288.png",
+    "about_url": "https://stower.money",
+    "universal_url": "https://connect.stower.money",
+    "deepLink": "stower-tc://",
+    "bridge": [
+       {
+          "type": "sse",
+          "url": "https://bridge.stower.money/bridge"
+       }
+    ],
+    "platforms": ["ios", "android"],
     "features": [
       {
         "name": "SendTransaction",
         "maxMessages": 255,
         "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
       }
     ]
   },
