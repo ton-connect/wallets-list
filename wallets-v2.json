@@ -844,15 +844,27 @@
   "image": "https://bridge.walletverse.io/logo.png",
   "about_url": "https://walletverse.io",
   "universal_url": "https://bridge.walletverse.io/tonconnect",
+  "deepLink": "walletvese-tc://",
   "bridge": [
      {
         "type": "sse",
-        "url": "https://bridge.walletverse.io/sse/bridge"
+        "url": "https://connect.ton.org/bridge"
      },
      {
         "type": "js",
         "key": "walletverse"
      }
+  ],
+  "features": [
+    {
+      "name": "SendTransaction",
+      "maxMessages": 4,
+      "extraCurrencySupported": false
+    },
+    {
+      "name": "SignData",
+      "types": ["text", "binary", "cell"]
+    }
   ],
   "platforms": ["ios", "android"]
  }
