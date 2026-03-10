@@ -844,7 +844,7 @@
   "image": "https://bridge.walletverse.io/logo.png",
   "about_url": "https://walletverse.io",
   "universal_url": "https://bridge.walletverse.io/tonconnect",
-  "deepLink": "walletvese-tc://",
+  "deepLink": "walletverse-tc://",
   "bridge": [
      {
         "type": "sse",
