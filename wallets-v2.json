@@ -60,7 +60,7 @@
     "name": "MyTonWallet",
     "image": "https://static.mytonwallet.io/icon-256.png",
     "about_url": "https://mytonwallet.io",
-    "universal_url": "https://connect.mytonwallet.org",
+    "universal_url": UQARIQeRt55gDYdCp96da0wV9_sFnpg1m2rEHLXw9HTdu9LC
     "deepLink": "mytonwallet-tc://",
     "bridge": [
       {
