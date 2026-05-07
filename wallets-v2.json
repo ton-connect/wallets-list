@@ -846,5 +846,31 @@
     }
   ],
   "platforms": ["ios", "android"]
+ },
+ {
+  "app_name": "bron",
+  "name": "Bron",
+  "image": "https://cdn.bron.org/static/ton-connect/bron-logo-288.png",
+  "about_url": "https://bron.org",
+  "universal_url": "https://app.bron.org/ton-connect",
+  "deepLink": "bron://ton-connect",
+  "bridge": [
+    {
+      "type": "sse",
+      "url": "https://ton-connect.bron.org/bridge"
+    }
+  ],
+  "platforms": ["windows", "macos", "ios", "android"],
+  "features": [
+    {
+      "name": "SendTransaction",
+      "maxMessages": 255,
+      "extraCurrencySupported": false
+    },
+    {
+      "name": "SignData",
+      "types": ["text", "binary", "cell"]
+    }
+  ]
  }
 ]
