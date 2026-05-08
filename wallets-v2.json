@@ -846,5 +846,35 @@
     }
   ],
   "platforms": ["ios", "android"]
- }
+ },
+   {
+    "app_name": "ArculusWallet",
+    "name": "Arculus Wallet",
+    "image": "https://gw.arculus.co/icon/arculuswallet.png",
+    "about_url": "https://www.getarculus.com",
+    "universal_url": "https://gw.arculus.co/tonconnect",
+    "deepLink": "arculus-tc://",
+    "bridge": [
+       {
+          "type": "sse",
+          "url": "https://tonconnect.arculus.co/bridge"
+       }
+    ],
+    "platforms": ["ios", "android"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": true
+      },
+      {
+        "name":"SignData",
+        "types":[
+          "text",
+          "binary",
+          "cell"
+        ]
+      }
+    ]
+   }
 ]
