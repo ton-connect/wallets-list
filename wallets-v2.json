@@ -865,7 +865,7 @@
       {
         "name": "SendTransaction",
         "maxMessages": 4,
-        "extraCurrencySupported": true
+        "extraCurrencySupported": false
       },
       {
         "name":"SignData",
