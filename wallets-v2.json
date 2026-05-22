@@ -860,7 +860,7 @@
       "url": "https://ton-connect.bron.org/bridge"
     }
   ],
-  "platforms": ["windows", "macos", "ios", "android"],
+  "platforms": ["windows", "macos"],
   "features": [
     {
       "name": "SendTransaction",
