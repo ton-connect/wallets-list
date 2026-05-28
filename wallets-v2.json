@@ -857,7 +857,7 @@
   "bridge": [
     {
       "type": "sse",
-      "url": "https://ton-connect.bron.org/bridge"
+      "url": "https://connect.ton.org/bridge"
     }
   ],
   "platforms": ["windows", "macos"],
