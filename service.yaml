@@ -1,0 +1,9 @@
+apiVersion: idp.mw.me/v1
+container-name: nginx # adoption: match the live container (default would be the service name)
+image:
+  tag: d477dd2-hdrs # deploy version pointer (upstream short-sha + our -hdrs header layer)
+replicas: 2
+arch: arm64
+route:
+  public: true
+  healthcheck-path: /wallets-v2.json
