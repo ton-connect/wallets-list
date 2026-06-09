@@ -1,109 +1,84 @@
 name: Build
 
+# Build and publish the container image. Push-only triggers: this workflow
+# mints short-lived cloud credentials via OIDC, so it must never run for fork
+# pull requests (no pull_request / pull_request_target trigger).
 on:
-  workflow_call:
-    inputs:
-      ref_name:
-        required: true
-        type: string
-      image_file:
-        required: false
-        default: './Dockerfile'
-        type: string
-      component:
-        required: false
-        type: string
-    outputs:
-      image_repo:
-        value: ${{ jobs.build.outputs.image_repo }}
-      image_tag:
-        value: ${{ jobs.build.outputs.image_tag }}
-      image_digest:
-        value: ${{ jobs.build.outputs.image_digest }}
-      image_revision:
-        value: ${{ jobs.build.outputs.image_revision }}
-      component:
-        value: ${{ jobs.build.outputs.component }}
+  push:
+    branches: [main, 'release/**']
+    paths-ignore:
+      - 'version.yaml'
+      - '**/*.md'
 
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_REGION: eu-central-1
+  ECR_REGISTRY: 990678687129.dkr.ecr.eu-central-1.amazonaws.com
+  ECR_REPOSITORY: wallets-list
+  ROLE_ARN: arn:aws:iam::990678687129:role/gha-ecr-push-wallets-list
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    permissions:
-      packages: write
-      contents: read
-
-    env:
-      REF_NAME: ${{ inputs.ref_name || github.ref_name }}
-
-    outputs:
-      image_repo: ghcr.io/${{ steps.params.outputs.repository }}
-      image_tag: ${{ steps.params.outputs.tag }}
-      image_digest: ${{ steps.build.outputs.digest }}
-      image_revision: ${{ steps.revision.outputs.revision }}
-      component: ${{ steps.params.outputs.component }}
+    runs-on: ubuntu-24.04-arm
 
     steps:
-      - name: Compute params
-        uses: actions/github-script@v7
-        id: params
-        env:
-          COMPONENT: ${{ inputs.component }}
-        with:
-          script: |
-            core.setOutput('tag', process.env.REF_NAME);
-            core.setOutput('component', process.env.COMPONENT);
-            let repository = process.env.GITHUB_REPOSITORY.toLowerCase();
-            if (process.env.COMPONENT) {
-              repository += '/' + process.env.COMPONENT
-            }
-            core.setOutput('repository', repository);
-
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Configure credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          fetch-depth: 0
-          submodules: recursive
-          ref: ${{ env.REF_NAME }}
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
 
-      - name: Resolve revision
-        id: revision
-        run: |
-          echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ghcr.io/${{ steps.params.outputs.repository }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          context: 'git'
-          tags: |
-            type=sha
-            type=sha,format=long
-            type=raw,value=${{ steps.params.outputs.tag }}
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v6
-        id: build
-        with:
-          context: .
-          file: ${{ inputs.image_file }}
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Test Docker image
+      # Image tags are immutable: re-running a build for a sha that is already
+      # published is a success, not a failure. If the tag exists, short-circuit
+      # the rest of the job.
+      - name: Check for existing image
+        id: guard
         env:
-          IMAGE: ghcr.io/${{ steps.params.outputs.repository }}:${{ steps.params.outputs.tag }}
+          IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker pull $IMAGE
-          docker compose -f docker-compose.test.yml run --rm test
+          if aws ecr describe-images \
+            --repository-name "$ECR_REPOSITORY" \
+            --image-ids imageTag="$IMAGE_TAG" >/dev/null 2>&1; then
+            echo "Image for $IMAGE_TAG already published; skipping build."
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Log in to registry
+        if: steps.guard.outputs.exists != 'true'
+        uses: aws-actions/amazon-ecr-login@v2
+
+      # provenance/sbom attestations off so the pushed artifact is a plain
+      # single-arch manifest, not an OCI image index.
+      - name: Build image
+        if: steps.guard.outputs.exists != 'true'
+        run: |
+          SHORT_SHA="${GITHUB_SHA::7}"
+          echo "SHORT_SHA=$SHORT_SHA" >> "$GITHUB_ENV"
+          docker build \
+            --provenance=false \
+            --sbom=false \
+            --build-arg SERVER_NAME=config.ton.org \
+            -t "$ECR_REGISTRY/$ECR_REPOSITORY:$GITHUB_SHA" \
+            -t "$ECR_REGISTRY/$ECR_REPOSITORY:$SHORT_SHA" \
+            .
+
+      - name: Test image
+        if: steps.guard.outputs.exists != 'true'
+        env:
+          IMAGE: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
+          SERVER_NAME: config.ton.org
+        run: docker compose -f docker-compose.test.yml run --rm test
+
+      - name: Push image
+        if: steps.guard.outputs.exists != 'true'
+        run: |
+          docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$GITHUB_SHA"
+          docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$SHORT_SHA"
