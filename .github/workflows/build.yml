@@ -65,7 +65,6 @@ jobs:
           docker build \
             --provenance=false \
             --sbom=false \
-            --build-arg SERVER_NAME=config.ton.org \
             -t "$ECR_REGISTRY/$ECR_REPOSITORY:$GITHUB_SHA" \
             -t "$ECR_REGISTRY/$ECR_REPOSITORY:$SHORT_SHA" \
             .
@@ -75,6 +74,13 @@ jobs:
         env:
           IMAGE: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
           SERVER_NAME: config.ton.org
+        run: docker compose -f docker-compose.test.yml run --rm test
+
+      - name: Test image (runtime SERVER_NAME override)
+        if: steps.guard.outputs.exists != 'true'
+        env:
+          IMAGE: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
+          SERVER_NAME: override.example.org
         run: docker compose -f docker-compose.test.yml run --rm test
 
       - name: Push image
