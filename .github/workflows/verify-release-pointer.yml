@@ -50,7 +50,7 @@ jobs:
 
           BRANCH=$(yq -r '.release.branch' version.yaml)
           SHA=$(yq -r '.release.sha' version.yaml)
-          echo "$BRANCH" | grep -Eq '^(main|release/.+)$' || { echo "::error::release.branch must match ^(main|release/.+)$ (got: $BRANCH)"; exit 1; }
+          echo "$BRANCH" | grep -Eq '^(main|release/[^/]+)$' || { echo "::error::release.branch must match ^(main|release/[^/]+)$ (got: $BRANCH)"; exit 1; }
           echo "$SHA" | grep -Eq '^[0-9a-f]{7,40}$' || { echo "::error::release.sha must be a 7-40 char hex commit id (got: $SHA)"; exit 1; }
 
           # Export for downstream steps.
@@ -63,9 +63,12 @@ jobs:
         if: steps.changed.outputs.changed == 'true'
         run: |
           # The pointed sha must resolve to a commit AND be reachable from its branch.
+          # Fetch the branch first so a missing branch and a sha that is simply not
+          # on the branch fail with distinct, actionable errors.
+          git fetch --no-tags origin "${RELEASE_BRANCH}" \
+            || { echo "::error::release.branch does not exist on origin: ${RELEASE_BRANCH}"; exit 1; }
           git rev-parse --verify "${RELEASE_SHA}^{commit}" >/dev/null 2>&1 \
-            || { echo "::error::sha not reachable from branch"; exit 1; }
-          git fetch --no-tags origin "${RELEASE_BRANCH}"
+            || { echo "::error::release.sha does not resolve to a commit: ${RELEASE_SHA}"; exit 1; }
           git merge-base --is-ancestor "$RELEASE_SHA" "origin/${RELEASE_BRANCH}" \
             || { echo "::error::sha not reachable from branch"; exit 1; }
 
