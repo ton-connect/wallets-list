@@ -3,4 +3,4 @@
 # before nginx starts listening, so the file is always present for the first request.
 set -eu
 sed "s|__SERVER_NAME__|${SERVER_NAME}|g" \
-    /usr/share/nginx/html/wallets-v2.json.tpl > /usr/share/nginx/html/wallets-v2.json
+    /etc/wallets-list/wallets-v2.json.tpl > /usr/share/nginx/html/wallets-v2.json

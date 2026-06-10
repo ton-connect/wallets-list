@@ -19,7 +19,7 @@ FROM nginx:alpine
 RUN rm /usr/share/nginx/html/*
 
 COPY --from=builder /build/nginx.conf /etc/nginx/nginx.conf
-COPY --from=builder /build/wallets-v2.proxy.json /usr/share/nginx/html/wallets-v2.json.tpl
+COPY --from=builder /build/wallets-v2.proxy.json /etc/wallets-list/wallets-v2.json.tpl
 COPY --from=builder /build/wallets.json /usr/share/nginx/html/wallets.json
 COPY assets/ /usr/share/nginx/html/assets/
 COPY server/30-materialize-wallets.sh /docker-entrypoint.d/30-materialize-wallets.sh
