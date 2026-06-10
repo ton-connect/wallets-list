@@ -6,9 +6,6 @@ name: Build
 on:
   push:
     branches: [main, 'release/**']
-    paths-ignore:
-      - 'version.yaml'
-      - '**/*.md'
 
 permissions:
   id-token: write
