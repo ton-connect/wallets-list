@@ -56,6 +56,44 @@
     ]
   },
   {
+    "app_name": "gramwallet",
+    "name": "Gram Wallet",
+    "image": "https://static.gramwallet.io/gramwallet/icon-288.png",
+    "about_url": "https://gramwallet.io",
+    "universal_url": "https://connect.gramwallet.io",
+    "deepLink": "gramwallet-tc://",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "gramwallet"
+      },
+      {
+        "type": "sse",
+        "url": "https://tonconnectbridge.mytonwallet.org/bridge/"
+      }
+    ],
+    "platforms": [
+      "chrome",
+      "windows",
+      "macos",
+      "linux",
+      "ios",
+      "android",
+      "firefox"
+    ],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
+  },
+  {
     "app_name": "mytonwallet",
     "name": "MyTonWallet",
     "image": "https://static.mytonwallet.io/icon-256.png",
