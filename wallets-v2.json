@@ -73,13 +73,8 @@
       }
     ],
     "platforms": [
-      "chrome",
-      "windows",
-      "macos",
-      "linux",
       "ios",
-      "android",
-      "firefox"
+      "android"
     ],
     "features": [
       {
