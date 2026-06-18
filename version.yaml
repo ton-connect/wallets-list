@@ -2,4 +2,4 @@
 # Changes to this file intentionally do not trigger image builds.
 release:
   branch: main
-  sha: 69c79b8
+  sha: 5c84ae2
