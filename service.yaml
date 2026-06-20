@@ -7,3 +7,16 @@ replicas: 2
 arch: arm64
 route:
   healthcheck-path: /wallets-v2.json
+# Split health surface: move the readiness probe and the load balancer health check off the
+# heavy wallets-v2.json static file onto cheap dedicated endpoints (both return a static 200,
+# access_log off). The port is left unset on purpose, so the probes stay on the traffic port and
+# no /metrics scrape is wired up, since nginx serves no metrics here.
+healthcheck:
+  readiness-path: /readyz
+  liveness-path: /healthz
+# A static nginx cannot flip /readyz to 503 from a SIGTERM handler, so it drains through this
+# preStop hook instead: the sleep gives the load balancer time to deregister the target, then
+# nginx -s quit finishes in-flight requests. It runs before SIGTERM and counts against the
+# termination grace period.
+termination:
+  pre-stop-exec: ["/bin/sh", "-c", "sleep 10; nginx -s quit"]
