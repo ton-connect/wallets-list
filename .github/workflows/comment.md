@@ -28,7 +28,7 @@ Follow these steps to submit your wallet for inclusion in the TON Connect list:
 4. **Submit a PR**:  
    * Open a Pull Request (PR) to add your wallet to the TON Connect registry.  
 5. **Notify Us**:  
-   * Reach out to [**@kawaiinya**](https://t.me/kawaiinya) on Telegram to confirm your submission.  
+   * Reach out to [**@vskoshkins**](https://t.me/vskoshkins) on Telegram to confirm your submission.  
    * We’ll create a dedicated Telegram chat to coordinate the audit.
 
 ---
@@ -60,4 +60,4 @@ Follow these steps to submit your wallet for inclusion in the TON Connect list:
 ---
 
 We’re excited to collaborate with you and welcome your wallet to the TON ecosystem\! 🚀  
-For questions, please contact [**@kawaiinya**](https://t.me/kawaiinya) on Telegram.
+For questions, please contact [**@vskoshkins**](https://t.me/vskoshkins) on Telegram.
