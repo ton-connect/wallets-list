@@ -879,5 +879,26 @@
     }
   ],
   "platforms": ["ios", "android"]
- }
+ },
+  {
+    "app_name": "block-watch",
+    "name": "Block Watch",
+    "image": "https://raw.githubusercontent.com/ton-connect/wallets-list/main/assets/block_watch.png",
+    "about_url": "https://block-watch-web.vercel.app",
+    "universal_url": "https://t.me/BLWDev_bot/app?startapp=bridge",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://amused-generosity-production-1090.up.railway.app/api/bridge"
+      }
+    ],
+    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
+  }
 ]
