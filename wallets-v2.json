@@ -879,5 +879,36 @@
     }
   ],
   "platforms": ["ios", "android"]
- }
+ },
+ {
+  "app_name": "kcwallet",
+  "name": "KuCoin Web3 Wallet",
+  "image": "https://static-public.kuweb3.net/web3/ea8e5682-7131-40c1-8f6e-78f6fbca7101.png",
+  "about_url": "https://www.kucoin.com/web3",
+  "bridge": [
+    {
+      "type": "js",
+      "key": "kcwallet"
+    }
+  ],
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "features": [
+    {
+      "name": "SendTransaction",
+      "maxMessages": 4,
+      "extraCurrencySupported": false
+    },
+    {
+      "name": "SignData",
+      "types": [
+        "text",
+        "binary",
+        "cell"
+      ]
+    }
+  ]
+}
 ]
