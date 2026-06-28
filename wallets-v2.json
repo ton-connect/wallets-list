@@ -879,5 +879,19 @@
     }
   ],
   "platforms": ["ios", "android"]
+ },
+ {
+    "app_name": "imeWallet",
+    "name": "iMe Wallet",
+    "image": "https://w.api.imem.app/static/logo-large.png",
+    "about_url": "https://imem.app",
+    "universal_url": "https://w.api.imem.app/tonconnect",
+    "bridge": [
+      { "type": "sse", "url": "https://bridge.tonapi.io/bridge" }
+    ],
+    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "features": [
+      { "name": "SendTransaction", "maxMessages": 255, "extraCurrencySupported": false }
+    ]
  }
 ]
