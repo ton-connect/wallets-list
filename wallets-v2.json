@@ -879,5 +879,29 @@
     }
   ],
   "platforms": ["ios", "android"]
- }
+ },
+ {
+    "app_name": "AB Pay",
+    "name": "AB Pay",
+    "image": "https://www.abpay.cash/images/abpay.png",
+    "about_url": "https://www.abpay.cash/",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "abpay"
+      },
+      {
+        "type": "sse",
+        "url": "https://ton-connect.abpay.cash/bridge"
+      }
+    ],
+    "platforms": ["ios", "android"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
+  }
 ]
