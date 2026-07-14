@@ -129,6 +129,19 @@
                 },
                 "extraCurrencySupported": {
                   "type": "boolean"
+                },
+                "itemTypes": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "ton",
+                      "jetton",
+                      "nft"
+                    ]
+                  }
                 }
               },
               "required": [
@@ -164,6 +177,57 @@
               "required": [
                 "name",
                 "types"
+              ]
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": [
+                    "SignMessage"
+                  ]
+                },
+                "maxMessages": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "extraCurrencySupported": {
+                  "type": "boolean"
+                },
+                "itemTypes": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "ton",
+                      "jetton",
+                      "nft"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "name",
+                "maxMessages"
+              ]
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": [
+                    "EmbeddedRequest"
+                  ]
+                }
+              },
+              "required": [
+                "name"
               ]
             }
           ]
