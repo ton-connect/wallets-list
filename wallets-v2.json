@@ -911,7 +911,7 @@
   "name": "SociaWallet",
   "image": "https://wallet.sociafober.me/logos/sociawallet.png",
   "about_url": "https://socia.ton.run",
-  "universal_url": "https://t.me/SociaWalletBot/main?startapp=",
+  "universal_url": "https://t.me/SociaWalletBot/main",
   "bridge": [
     {
       "type": "sse",
