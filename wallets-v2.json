@@ -905,5 +905,30 @@
       "types": ["text", "binary", "cell"]
     }
   ]
- }
+ },
+    {
+  "app_name": "sociawallet",
+  "name": "SociaWallet",
+  "image": "https://wallet.sociafober.me/logos/sociawallet.png",
+  "about_url": "https://socia.ton.run",
+  "universal_url": "https://t.me/SociaWalletBot/main",
+  "bridge": [
+    {
+      "type": "sse",
+      "url": "https://connect.ton.org/bridge"
+    }
+  ],
+  "platforms": ["ios", "android", "macos", "windows", "linux"],
+  "features": [
+    {
+      "name": "SendTransaction",
+      "maxMessages": 255,
+      "extraCurrencySupported": true
+    },
+    {
+      "name": "SignData",
+      "types": ["text", "binary", "cell"]
+    }
+  ]
+}
 ]
