@@ -131,6 +131,42 @@ class ImageTester:
 
         return unique_original_urls, test_urls
 
+    def test_cache_headers(self, filename: str, expected_max_age: int) -> Tuple[bool, str]:
+        """
+        Verify the freshness window a static file advertises.
+
+        The value is load-bearing, not cosmetic: nothing in the release path invalidates the
+        CDN, so a wallet merged into wallets-v2.json stays invisible to dApps for one full
+        max-age. The stale-while-revalidate window is a separate concern - it keeps the list
+        served while the origin is unreachable - and must survive any change to freshness.
+
+        Args:
+            filename: File to request
+            expected_max_age: Freshness window the file must advertise, in seconds
+
+        Returns:
+            Tuple of (success: bool, error_message: str)
+        """
+        url = f"{self.base_url}/{filename}"
+        self.log(f"Checking cache headers on: {url}")
+
+        try:
+            response = self.session.get(url, timeout=self.timeout)
+            response.raise_for_status()
+        except requests.RequestException as e:
+            return False, f"Request failed: {e}"
+
+        cache_control = response.headers.get('cache-control', '')
+        self.log(f"  cache-control: {cache_control or 'N/A'}")
+
+        directives = {d.strip() for d in cache_control.split(',')}
+        expected = [f"max-age={expected_max_age}", "stale-while-revalidate=86400"]
+        missing = [d for d in expected if d not in directives]
+        if missing:
+            return False, f"missing {', '.join(missing)} (got: {cache_control or 'no Cache-Control header'})"
+
+        return True, ""
+
     def is_valid_png(self, content: bytes) -> bool:
         """
         Check if content is a valid PNG image.
@@ -224,10 +260,20 @@ class ImageTester:
             failed_items.append(f"{self.base_url}/wallets.json")
         total_tests += 1
 
+        # Test 3: wallets-v2.json advertises the expected freshness window
+        success, error = self.test_cache_headers("wallets-v2.json", 300)
+        if success:
+            print("✓ wallets-v2.json advertises max-age=300 + stale-while-revalidate=86400")
+            passed_tests += 1
+        else:
+            print(f"✗ wallets-v2.json cache headers: {error}")
+            failed_items.append(f"{self.base_url}/wallets-v2.json Cache-Control")
+        total_tests += 1
+
         if wallets_v2 is None:
             return passed_tests, total_tests, failed_items
 
-        # Test 3: Extract and validate image URLs from wallets-v2.json
+        # Test 4: Extract and validate image URLs from wallets-v2.json
         original_urls, test_urls = self.extract_image_urls(wallets_v2)
         if not test_urls:
             print("✗ No image URLs found in wallets-v2.json data")
@@ -243,7 +289,7 @@ class ImageTester:
                 print(f"✓ Replacing {replaced_count} URLs: {self.expected_base_url} → {self.base_url}/{self.assets_prefix}")
         print()
 
-        # Test 4: Test each image URL from wallets-v2.json
+        # Test 5: Test each image URL from wallets-v2.json
         for i, (original_url, test_url) in enumerate(zip(original_urls, test_urls), 1):
             if original_url != test_url:
                 print(f"[{i}/{len(test_urls)}] Testing: {original_url} → {test_url}")
