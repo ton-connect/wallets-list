@@ -893,7 +893,7 @@
       "url": "https://connect.ton.org/bridge"
     }
   ],
-  "platforms": ["windows", "macos"],
+  "platforms": ["ios", "android", "windows", "macos"],
   "features": [
     {
       "name": "SendTransaction",
