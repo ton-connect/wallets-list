@@ -930,5 +930,41 @@
       "types": ["text", "binary", "cell"]
     }
   ]
+},
+{
+  "app_name": "twallet",
+  "name": "TWallet",
+  "image": "https://twallet.ae/assets/tonconnect-icon.png",
+  "tondns": "tmail.ton",
+  "about_url": "https://twallet.ae",
+  "universal_url": "https://connect.twallet.ae",
+  "deepLink": "twallet-tc://",
+  "bridge": [
+    {
+      "type": "sse",
+      "url": "https://bridge.tonapi.io/bridge"
+    }
+  ],
+  "platforms": [
+    "chrome",
+    "firefox",
+    "safari",
+    "android"
+  ],
+  "features": [
+    {
+      "name": "SendTransaction",
+      "maxMessages": 255,
+      "extraCurrencySupported": false
+    },
+    {
+      "name": "SignData",
+      "types": [
+        "text",
+        "binary",
+        "cell"
+      ]
+    }
+  ]
 }
 ]
