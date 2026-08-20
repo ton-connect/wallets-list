@@ -880,5 +880,29 @@
       "types": ["text", "binary", "cell"]
     }
   ]
-}
+},
+  {
+    "app_name": "guarda",
+    "name": "Guarda Wallet",
+    "image": "https://guarda.com/assets/images/tonconnect-icon.png",
+    "about_url": "https://guarda.com/",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "guarda"
+      }
+    ],
+    "platforms": ["chrome"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
+  }
 ]
