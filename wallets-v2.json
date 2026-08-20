@@ -56,10 +56,43 @@
     ]
   },
   {
+    "app_name": "gramwallet",
+    "name": "Gram Wallet",
+    "image": "https://static.gramwallet.io/gramwallet/icon-288.png",
+    "about_url": "https://gramwallet.io",
+    "universal_url": "https://connect.gramwallet.io",
+    "deepLink": "gramwallet-tc://",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "gramwallet"
+      },
+      {
+        "type": "sse",
+        "url": "https://tonconnectbridge.mytonwallet.org/bridge/"
+      }
+    ],
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
+  },
+  {
     "app_name": "mytonwallet",
-    "name": "MyTonWallet",
-    "image": "https://static.mytonwallet.io/icon-256.png",
-    "about_url": "https://mytonwallet.io",
+    "name": "My Wallet",
+    "image": "https://static.mywallet.io/mywallet/icon-288.png",
+    "about_url": "https://mywallet.io",
     "universal_url": "https://connect.mytonwallet.org",
     "deepLink": "mytonwallet-tc://",
     "bridge": [
@@ -267,27 +300,6 @@
       }
     ],
     "platforms": ["ios", "android", "chrome"],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 4,
-        "extraCurrencySupported": false
-      }
-    ]
-  },
-  {
-    "app_name": "dewallet",
-    "name": "DeWallet",
-    "image": "https://raw.githubusercontent.com/delab-team/manifests-images/main/WalletAvatar.png",
-    "about_url": "https://delabwallet.com",
-    "universal_url": "https://t.me/dewallet?attach=wallet",
-    "bridge": [
-      {
-        "type": "sse",
-        "url": "https://bridge.dewallet.pro/bridge"
-      }
-    ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
     "features": [
       {
         "name": "SendTransaction",
@@ -593,35 +605,6 @@
     ]
   },
   {
-    "app_name": "nicegramWallet",
-    "name": "Nicegram Wallet",
-    "image": "https://static.nicegram.app/icon.png",
-    "about_url": "https://nicegram.app",
-    "universal_url": "https://nicegram.app/tc",
-    "deepLink": "nicegram-tc://",
-    "bridge": [
-      {
-        "type": "sse",
-        "url": "https://tc.nicegram.app/bridge"
-      },
-      {
-        "type": "js",
-        "key": "nicegramWallet"
-      }
-    ],
-    "platforms": [
-      "ios",
-      "android"
-    ],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 255,
-        "extraCurrencySupported": false
-      }
-    ]
-  },
-  {
     "app_name": "echoooTonWallet",
     "name": "EchoooWallet",
     "image": "https://cdn.echooo.xyz/front-end/source/images/logo/echooo-ton.png",
@@ -643,27 +626,6 @@
       {
         "name": "SendTransaction",
         "maxMessages": 255,
-        "extraCurrencySupported": false
-      }
-    ]
-  },
-  {
-    "app_name": "blitzwallet",
-    "name": "BLITZ wallet",
-    "image": "https://blitzwallet.cfd/wallet/public/logo.png",
-    "about_url": "https://blitzwallet.cfd",
-    "universal_url": "https://t.me/blitz_wallet_bot?attach=wallet",
-    "bridge": [
-      {
-        "type": "sse",
-        "url": "https://blitzwallet.cfd/bridge/"
-      }
-    ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 4,
         "extraCurrencySupported": false
       }
     ]
@@ -838,6 +800,87 @@
       }
     ]
   },
+  {
+  "app_name": "walletverse",
+  "name": "Walletverse",
+  "image": "https://bridge.walletverse.io/logo.png",
+  "about_url": "https://walletverse.io",
+  "universal_url": "https://bridge.walletverse.io/tonconnect",
+  "deepLink": "walletverse-tc://",
+  "bridge": [
+     {
+        "type": "sse",
+        "url": "https://connect.ton.org/bridge"
+     },
+     {
+        "type": "js",
+        "key": "walletverse"
+     }
+  ],
+  "features": [
+    {
+      "name": "SendTransaction",
+      "maxMessages": 4,
+      "extraCurrencySupported": false
+    },
+    {
+      "name": "SignData",
+      "types": ["text", "binary", "cell"]
+    }
+  ],
+  "platforms": ["ios", "android"]
+ },
+ {
+  "app_name": "bron",
+  "name": "Bron",
+  "image": "https://cdn.bron.org/static/ton-connect/bron-logo-288.png",
+  "about_url": "https://bron.org",
+  "universal_url": "https://app.bron.org/ton-connect",
+  "deepLink": "bron://ton-connect",
+  "bridge": [
+    {
+      "type": "sse",
+      "url": "https://connect.ton.org/bridge"
+    }
+  ],
+  "platforms": ["windows", "macos"],
+  "features": [
+    {
+      "name": "SendTransaction",
+      "maxMessages": 4,
+      "extraCurrencySupported": false
+    },
+    {
+      "name": "SignData",
+      "types": ["text", "binary", "cell"]
+    }
+  ]
+ },
+    {
+  "app_name": "sociawallet",
+  "name": "SociaWallet",
+  "image": "https://wallet.sociafober.me/logos/sociawallet.png",
+  "about_url": "https://socia.ton.run",
+  "universal_url": "https://t.me/SociaWalletBot/main",
+  "bridge": [
+    {
+      "type": "sse",
+      "url": "https://connect.ton.org/bridge"
+    }
+  ],
+  "platforms": ["ios", "android", "macos", "windows", "linux", "chrome", "firefox"],
+  "features": [
+    {
+      "name": "SendTransaction",
+      "maxMessages": 255,
+      "extraCurrencySupported": true
+    },
+    {
+      "name": "SignData",
+      "types": ["text", "binary", "cell"]
+    }
+  ]
+},
   {
     "app_name": "guarda",
     "name": "Guarda Wallet",

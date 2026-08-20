@@ -1,0 +1,6 @@
+# Environment overlay for staging deployments — merged over service.yaml.
+env:
+  - name: SERVER_NAME
+    value: staging.config.ton.org
+route:
+  host: staging.config.ton.org

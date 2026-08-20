@@ -5,6 +5,8 @@ services:
     image: ${IMAGE:-ton-wallets-local}
     ports:
       - "${TEST_PORT:-8088}:80"
+    environment:
+      - SERVER_NAME=${SERVER_NAME:-config.ton.org}
     healthcheck:
       test: ["CMD", "curl", "-q", "http://127.0.0.1/wallets-v2.json"]
       interval: 1s
