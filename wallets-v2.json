@@ -841,7 +841,7 @@
   {
     "app_name": "guarda",
     "name": "Guarda Wallet",
-    "image": "https://raw.githubusercontent.com/guardaco/assets/master/guarda.png",
+    "image": "https://guarda.com/assets/images/tonconnect-icon.png",
     "about_url": "https://guarda.com/",
     "bridge": [
       {
