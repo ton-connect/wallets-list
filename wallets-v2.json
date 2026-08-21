@@ -880,5 +880,26 @@
       "types": ["text", "binary", "cell"]
     }
   ]
-}
+},
+  {
+    "app_name": "dewallet",
+    "name": "DeWallet",
+    "image": "https://storage.coffee.agency/generic/delab/dewallet_logo.png",
+    "about_url": "https://t.me/dewallet",
+    "universal_url": "https://t.me/dewallet?attach=wallet",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://bridge.wallet.coffee.agency/bridge"
+      }
+    ],
+    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
+  }
 ]
