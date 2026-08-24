@@ -880,5 +880,25 @@
       "types": ["text", "binary", "cell"]
     }
   ]
-}
+},
+  {
+    "app_name": "giftpass",
+    "name": "GiftPass Wallet",
+    "image": "https://premium.cli-proxy.cn/wallet/giftpass-288.png",
+    "about_url": "https://premium.cli-proxy.cn/wallet/",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "giftpass"
+      }
+    ],
+    "platforms": ["chrome"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 1,
+        "extraCurrencySupported": false
+      }
+    ]
+  }
 ]
