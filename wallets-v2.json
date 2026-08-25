@@ -884,8 +884,8 @@
   {
     "app_name": "giftpass",
     "name": "GiftPass Wallet",
-    "image": "https://premium.cli-proxy.cn/wallet/giftpass-288.png",
-    "about_url": "https://premium.cli-proxy.cn/wallet/",
+    "image": "https://premium.nexastore.cn/wallet/giftpass-288.png",
+    "about_url": "https://premium.nexastore.cn/wallet/",
     "bridge": [
       {
         "type": "js",
