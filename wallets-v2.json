@@ -880,5 +880,40 @@
       "types": ["text", "binary", "cell"]
     }
   ]
+},
+   {
+  "app_name": "scuffy-wallet",
+  "name": "Scuffy Wallet",
+  "image": "https://scuffyton.xyz/icon-288.png",
+  "about_url": "https://scuffyton.xyz/",
+  "universal_url": "https://scuffyton.xyz/connect",
+  "bridge": [
+    {
+      "type": "sse",
+      "url": "https://connect.ton.org/bridge"
+    }
+  ],
+  "platforms": [
+    "ios",
+    "android",
+    "macos",
+    "windows",
+    "linux"
+  ],
+  "features": [
+    {
+      "name": "SendTransaction",
+      "maxMessages": 4,
+      "extraCurrencySupported": false
+    },
+    {
+      "name": "SignData",
+      "types": [
+        "text",
+        "binary",
+        "cell"
+      ]
+    }
+  ]
 }
 ]
