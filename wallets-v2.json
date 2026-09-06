@@ -900,5 +900,17 @@
         "extraCurrencySupported": false
       }
     ]
-  }
+  },
+  {
+  "app_name": "gramvault",
+  "name": "GramVault",
+  "image": "https://dcoos.com/gram/tonconnect/icon-288.png",
+  "about_url": "https://dcoos.com/gram/tonconnect",
+  "universal_url": "https://dcoos.com/gram/tonconnect",
+  "deepLink": "gramvault://ton-connect",
+  "bridge": [
+    { "type": "sse", "url": "https://bridge.tonapi.io/bridge" }
+  ],
+  "platforms": ["android", "ios"]
+}
 ]
