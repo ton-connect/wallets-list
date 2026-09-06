@@ -911,6 +911,11 @@
   "bridge": [
     { "type": "sse", "url": "https://bridge.tonapi.io/bridge" }
   ],
-  "platforms": ["android", "ios"]
+  "platforms": ["android", "ios"],
+  "features": [
+    { "name": "SendTransaction", "maxMessages": 4, "extraCurrencySupported":
+  false },
+    { "name": "SignData", "types": ["text", "binary", "cell"] }
+  ]
 }
 ]
