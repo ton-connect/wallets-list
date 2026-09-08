@@ -17,10 +17,12 @@ We audit integrations to:
 Follow these steps to submit your wallet for inclusion in the TON Connect list:
 
 1. **Review Documentation**:  
-   * Study our [**TON Connect Documentation & Specifications**](https://docs.google.com/document/d/1Z2dWpn-p7net3fE1gBJlyNUeTN5nZaUC2g7lUt4t2TY/edit?usp=sharing).  
+   * Study our [**TON Connect Documentation & Specifications**](https://docs.ton.org/v3/guidelines/ton-connect/overview).  
    * Implement TON Connect in your wallet using the guidelines provided.  
-2. **Self-Test Using Checklist**:  
-   * Validate your integration against our [**Checklist of Tests**](https://www.notion.so/theopenplatform/Checklist-of-tests-1571e095988680828da8c2d57e5bf567).  
+2. **Self-Test Using Test Runner**:  
+   * Register your wallet and run TON Connect test launches in the [**Test Runner**](https://stand.ton-connect.io) for every platform you support.  
+   * See [**FAQ: How does wallet merge work?**](https://stand.ton-connect.io/faq) for the full walkthrough.  
+   * Additionally validate your integration against our [**Checklist of Tests**](https://www.notion.so/theopenplatform/Checklist-of-tests-1571e095988680828da8c2d57e5bf567).  
    * Ensure all functionalities (e.g., connection, transaction signing, error handling) work as expected.  
 3. **Review Wallet Manifest Requirements**:  
    * Familiarize yourself with the [**wallet manifest format and requirements**](https://github.com/ton-blockchain/wallets-list/?tab=readme-ov-file#entry-format).  
@@ -28,7 +30,7 @@ Follow these steps to submit your wallet for inclusion in the TON Connect list:
 4. **Submit a PR**:  
    * Open a Pull Request (PR) to add your wallet to the TON Connect registry.  
 5. **Notify Us**:  
-   * Reach out to [**@vskoshkins**](https://t.me/vskoshkins) on Telegram to confirm your submission.  
+   * Reach out to [**@keanu**](https://t.me/keanu) or [**@moving_away**](https://t.me/moving_away) on Telegram to confirm your submission.  
    * We’ll create a dedicated Telegram chat to coordinate the audit.
 
 ---
@@ -54,10 +56,10 @@ Follow these steps to submit your wallet for inclusion in the TON Connect list:
 
 ### **Resources**
 
-* [**TON Connect Specifications**](https://docs.google.com/document/d/1Z2dWpn-p7net3fE1gBJlyNUeTN5nZaUC2g7lUt4t2TY/edit?usp=sharing)  
+* [**TON Connect Specifications**](https://docs.ton.org/v3/guidelines/ton-connect/overview)  
 * [**Integration Checklist**](https://www.notion.so/theopenplatform/Checklist-of-tests-1571e095988680828da8c2d57e5bf567)
 
 ---
 
 We’re excited to collaborate with you and welcome your wallet to the TON ecosystem\! 🚀  
-For questions, please contact [**@vskoshkins**](https://t.me/vskoshkins) on Telegram.
+For questions, please contact [**@keanu**](https://t.me/keanu) or [**@moving_away**](https://t.me/moving_away) on Telegram.
