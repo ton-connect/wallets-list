@@ -1,4 +1,4 @@
-# TON Connect Wallets
+kevin.gitTON Connect Wallets
 
 List of wallets that support [TON Connect](https://docs.ton.org/ecosystem/ton-connect/overview).
 
