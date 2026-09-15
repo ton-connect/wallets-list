@@ -25,37 +25,6 @@
     ]
   },
   {
-    "app_name": "tonkeeper",
-    "name": "Tonkeeper",
-    "image": "https://tonkeeper.com/assets/tonconnect-icon.png",
-    "tondns": "tonkeeper.ton",
-    "about_url": "https://tonkeeper.com",
-    "universal_url": "https://app.tonkeeper.com/ton-connect",
-    "deepLink": "tonkeeper-tc://",
-    "bridge": [
-      {
-        "type": "sse",
-        "url": "https://bridge.tonapi.io/bridge"
-      },
-      {
-        "type": "js",
-        "key": "tonkeeper"
-      }
-    ],
-    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 255,
-        "extraCurrencySupported": true
-      },
-      {
-        "name": "SignData",
-        "types": ["text", "binary", "cell"]
-      }
-    ]
-  },
-  {
     "app_name": "gramwallet",
     "name": "Gram Wallet",
     "image": "https://static.gramwallet.io/gramwallet/icon-288.png",
@@ -81,6 +50,37 @@
         "name": "SendTransaction",
         "maxMessages": 255,
         "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
+  },
+  {
+    "app_name": "tonkeeper",
+    "name": "Keeper",
+    "image": "https://tonkeeper.com/assets/tonconnect-icon.png",
+    "tondns": "tonkeeper.ton",
+    "about_url": "https://tonkeeper.com",
+    "universal_url": "https://app.tonkeeper.com/ton-connect",
+    "deepLink": "tonkeeper-tc://",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://bridge.tonapi.io/bridge"
+      },
+      {
+        "type": "js",
+        "key": "tonkeeper"
+      }
+    ],
+    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": true
       },
       {
         "name": "SignData",
@@ -918,6 +918,27 @@
       {
         "name": "SendTransaction",
         "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
+  },
+  {
+    "app_name": "telegram",
+    "name": "Telegram Messenger",
+    "image": "https://telegram.org/img/t_logo_2x.png",
+    "about_url": "https://telegram.org",
+    "deepLink": "tg://",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://tonbridge.telegram.org"
+      }
+    ],
+    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
         "extraCurrencySupported": false
       }
     ]
