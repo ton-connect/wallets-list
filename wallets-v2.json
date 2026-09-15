@@ -927,6 +927,7 @@
     "name": "Telegram Messenger",
     "image": "https://telegram.org/img/t_logo_2x.png",
     "about_url": "https://telegram.org",
+    "universal_url": "https://t.me/wallet",
     "deepLink": "tg://",
     "bridge": [
       {
