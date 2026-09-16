@@ -924,10 +924,10 @@
   },
   {
     "app_name": "telegram",
-    "name": "Telegram Messenger",
+    "name": "Telegram",
     "image": "https://telegram.org/img/t_logo_2x.png",
     "about_url": "https://telegram.org",
-    "universal_url": "https://t.me/wallet",
+    "universal_url": "https://t.me/sendgrams",
     "deepLink": "tg://",
     "bridge": [
       {
