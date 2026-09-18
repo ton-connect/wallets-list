@@ -92,7 +92,7 @@
     "app_name": "mytonwallet",
     "name": "My Wallet",
     "image": "https://static.mywallet.io/mywallet/icon-288.png",
-    "about_url": "https://mywallet.io",
+    "about_url": "https://mywallet.io/?utm_source=tc",
     "universal_url": "https://connect.mytonwallet.org",
     "deepLink": "mytonwallet-tc://",
     "bridge": [
