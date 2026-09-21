@@ -25,37 +25,6 @@
     ]
   },
   {
-    "app_name": "tonkeeper",
-    "name": "Tonkeeper",
-    "image": "https://tonkeeper.com/assets/tonconnect-icon.png",
-    "tondns": "tonkeeper.ton",
-    "about_url": "https://tonkeeper.com",
-    "universal_url": "https://app.tonkeeper.com/ton-connect",
-    "deepLink": "tonkeeper-tc://",
-    "bridge": [
-      {
-        "type": "sse",
-        "url": "https://bridge.tonapi.io/bridge"
-      },
-      {
-        "type": "js",
-        "key": "tonkeeper"
-      }
-    ],
-    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 255,
-        "extraCurrencySupported": true
-      },
-      {
-        "name": "SignData",
-        "types": ["text", "binary", "cell"]
-      }
-    ]
-  },
-  {
     "app_name": "gramwallet",
     "name": "Gram Wallet",
     "image": "https://static.gramwallet.io/gramwallet/icon-288.png",
@@ -89,10 +58,41 @@
     ]
   },
   {
+    "app_name": "tonkeeper",
+    "name": "Keeper",
+    "image": "https://tonkeeper.com/assets/tonconnect-icon.png",
+    "tondns": "tonkeeper.ton",
+    "about_url": "https://tonkeeper.com",
+    "universal_url": "https://app.tonkeeper.com/ton-connect",
+    "deepLink": "tonkeeper-tc://",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://bridge.tonapi.io/bridge"
+      },
+      {
+        "type": "js",
+        "key": "tonkeeper"
+      }
+    ],
+    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": true
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
+  },
+  {
     "app_name": "mytonwallet",
     "name": "My Wallet",
     "image": "https://static.mywallet.io/mywallet/icon-288.png",
-    "about_url": "https://mywallet.io",
+    "about_url": "https://mywallet.io/?utm_source=tc",
     "universal_url": "https://connect.mytonwallet.org",
     "deepLink": "mytonwallet-tc://",
     "bridge": [
@@ -843,7 +843,7 @@
       "url": "https://connect.ton.org/bridge"
     }
   ],
-  "platforms": ["windows", "macos"],
+  "platforms": ["ios", "android", "windows", "macos"],
   "features": [
     {
       "name": "SendTransaction",
@@ -881,6 +881,69 @@
     }
   ]
 },
+  {
+    "app_name": "giftpass",
+    "name": "GiftPass Wallet",
+    "image": "https://premium.nexastore.cn/wallet/giftpass-288.png",
+    "about_url": "https://premium.nexastore.cn/wallet/",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "giftpass"
+      }
+    ],
+    "platforms": ["chrome"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 1,
+        "extraCurrencySupported": false
+      }
+    ]
+  },
+  {
+    "app_name": "dewallet",
+    "name": "DeWallet",
+    "image": "https://storage.coffee.agency/generic/delab/dewallet_logo.png",
+    "about_url": "https://t.me/dewallet",
+    "universal_url": "https://t.me/dewallet?attach=wallet",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://bridge.wallet.coffee.agency/bridge"
+      }
+    ],
+    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
+  },
+  {
+    "app_name": "telegram",
+    "name": "Telegram",
+    "image": "https://telegram.org/img/t_logo_2x.png",
+    "about_url": "https://telegram.org",
+    "universal_url": "https://t.me/sendgrams",
+    "deepLink": "tg://",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://tonbridge.telegram.org"
+      }
+    ],
+    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": false
+      }
+    ]
+  },
   {
     "app_name": "guarda",
     "name": "Guarda Wallet",
