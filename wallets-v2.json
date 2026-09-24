@@ -928,7 +928,7 @@
     "image": "https://telegram.org/img/t_logo_2x.png",
     "about_url": "https://telegram.org",
     "universal_url": "https://t.me/sendgrams",
-    "deepLink": "tg://",
+    "deepLink": "tg://sendgrams",
     "bridge": [
       {
         "type": "sse",
