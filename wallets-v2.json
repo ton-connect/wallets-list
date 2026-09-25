@@ -943,5 +943,30 @@
         "extraCurrencySupported": false
       }
     ]
+  },
+  {
+    "app_name": "mwallet",
+    "name": "MWallet",
+    "image": "https://wallet.mbit.trade/tonconnect-icon-288.png",
+    "about_url": "https://wallet.mbit.trade",
+    "universal_url": "https://wallet.mbit.trade/tc",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://connect.ton.org/bridge"
+      }
+    ],
+    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
   }
 ]
