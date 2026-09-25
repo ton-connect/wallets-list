@@ -3,4 +3,4 @@
 # pointer also publishes its own image — no separate re-tag step is needed.
 release:
   branch: main
-  sha: df5b4fac4c8707ace6389faedaa4a772b7d96699
+  sha: 85c3d12021ffcdc3ea783231130487e6fcef5d2a
