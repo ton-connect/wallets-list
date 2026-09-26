@@ -947,5 +947,28 @@
         "types": ["text", "binary", "cell"]
       }
     ]
+  },
+    "app_name": "grampay",
+    "name": "GramPay",
+    "image": "https://files.catbox.moe/fsvhj7.png",
+    "about_url": "https://violl.me",
+    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://bridge.tonapi.io/bridge"
+      }
+    ],
+    "universal_url": "https://t.me/GramWallettBot/wallet",
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData"
+      }
+    ]
   }
 ]
