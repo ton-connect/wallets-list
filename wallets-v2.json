@@ -337,8 +337,8 @@
   {
     "app_name": "GateWallet",
     "name": "GateWallet",
-    "image": "https://img.gatedataimg.com/prd-ordinal-imgs/036f07bb8730716e/gateio-0925.png",
-    "about_url": "https://www.gate.io/",
+    "image": "https://web3-icon.ldd678.com/gateconnect/GATEAPP.png",
+    "about_url": "https://www.gate.com/",
     "bridge": [
       {
         "type": "js",
@@ -351,6 +351,31 @@
     ],
     "platforms": ["ios", "android"],
     "universal_url": "https://gate.onelink.me/Hls0/web3?gate_web3_wallet_universal_type=ton_connect",
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
+  },
+  {
+    "app_name": "GateDEX",
+    "name": "GateDEX",
+    "image": "https://web3-icon.ldd678.com/gateconnect/DEX.png",
+    "about_url": "https://www.gatedex.com/",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "gatetonwallet"
+      },
+      {
+        "type": "sse",
+        "url": "https://dapp.gateio.services/tonbridge_api/bridge/v1"
+      }
+    ],
+    "platforms": ["ios", "android"],
+    "universal_url": "https://gatedex.onelink.me/mXlc/web3?gate_web3_wallet_universal_type=ton_connect",
     "features": [
       {
         "name": "SendTransaction",
