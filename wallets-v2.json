@@ -1,9 +1,9 @@
 [
   {
     "app_name": "telegram-wallet",
-    "name": "Wallet",
+    "name": "Walt (ex. Wallet)",
     "image": "https://wallet.tg/images/logo-288.png",
-    "about_url": "https://wallet.tg/",
+    "about_url": "https://walt.io/",
     "universal_url": "https://t.me/wallet?attach=wallet",
     "bridge": [
       {
