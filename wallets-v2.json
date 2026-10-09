@@ -87,6 +87,37 @@
     ]
   },
   {
+    "app_name": "tonkeeper",
+    "name": "Keeper",
+    "image": "https://tonkeeper.com/assets/tonconnect-icon.png",
+    "tondns": "tonkeeper.ton",
+    "about_url": "https://tonkeeper.com",
+    "universal_url": "https://app.tonkeeper.com/ton-connect",
+    "deepLink": "tonkeeper-tc://",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://bridge.tonapi.io/bridge"
+      },
+      {
+        "type": "js",
+        "key": "tonkeeper"
+      }
+    ],
+    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": true
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
+  },
+  {
     "app_name": "mytonwallet",
     "name": "My Wallet",
     "image": "https://static.mywallet.io/mywallet/icon-288.png",
@@ -117,37 +148,6 @@
         "name": "SendTransaction",
         "maxMessages": 255,
         "extraCurrencySupported": false
-      },
-      {
-        "name": "SignData",
-        "types": ["text", "binary", "cell"]
-      }
-    ]
-  },
-  {
-    "app_name": "tonkeeper",
-    "name": "Keeper",
-    "image": "https://tonkeeper.com/assets/tonconnect-icon.png",
-    "tondns": "tonkeeper.ton",
-    "about_url": "https://tonkeeper.com",
-    "universal_url": "https://app.tonkeeper.com/ton-connect",
-    "deepLink": "tonkeeper-tc://",
-    "bridge": [
-      {
-        "type": "sse",
-        "url": "https://bridge.tonapi.io/bridge"
-      },
-      {
-        "type": "js",
-        "key": "tonkeeper"
-      }
-    ],
-    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 255,
-        "extraCurrencySupported": true
       },
       {
         "name": "SignData",
