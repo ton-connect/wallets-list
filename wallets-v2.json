@@ -1,22 +1,23 @@
 [
   {
-    "app_name": "telegram-wallet",
-    "name": "Walt (ex. Wallet)",
-    "image": "https://wallet.tg/images/logo-288.png",
-    "about_url": "https://walt.io/",
-    "universal_url": "https://t.me/wallet?attach=wallet",
+    "app_name": "telegram",
+    "name": "Telegram",
+    "image": "https://telegram.org/img/t_logo_2x.png",
+    "about_url": "https://telegram.org",
+    "universal_url": "https://t.me/sendgrams",
+    "deepLink": "tg://sendgrams",
     "bridge": [
       {
         "type": "sse",
-        "url": "https://walletbot.me/tonconnect-bridge/bridge"
+        "url": "https://tonbridge.telegram.org"
       }
     ],
-    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
     "features": [
       {
         "name": "SendTransaction",
         "maxMessages": 255,
-        "extraCurrencySupported": true
+        "extraCurrencySupported": false
       },
       {
         "name": "SignData",
@@ -45,6 +46,9 @@
       "ios",
       "android"
     ],
+    "ui": {
+      "isButtonTransparent": true
+    },
     "features": [
       {
         "name": "SendTransaction",
@@ -58,24 +62,18 @@
     ]
   },
   {
-    "app_name": "tonkeeper",
-    "name": "Keeper",
-    "image": "https://tonkeeper.com/assets/tonconnect-icon.png",
-    "tondns": "tonkeeper.ton",
-    "about_url": "https://tonkeeper.com",
-    "universal_url": "https://app.tonkeeper.com/ton-connect",
-    "deepLink": "tonkeeper-tc://",
+    "app_name": "telegram-wallet",
+    "name": "Walt (ex. Wallet)",
+    "image": "https://wallet.tg/images/logo-288.png",
+    "about_url": "https://walt.io/",
+    "universal_url": "https://t.me/walt?attach=wallet",
     "bridge": [
       {
         "type": "sse",
-        "url": "https://bridge.tonapi.io/bridge"
-      },
-      {
-        "type": "js",
-        "key": "tonkeeper"
+        "url": "https://walletbot.me/tonconnect-bridge/bridge"
       }
     ],
-    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
+    "platforms": ["ios", "android", "macos", "windows", "linux"],
     "features": [
       {
         "name": "SendTransaction",
@@ -119,6 +117,37 @@
         "name": "SendTransaction",
         "maxMessages": 255,
         "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
+  },
+  {
+    "app_name": "tonkeeper",
+    "name": "Keeper",
+    "image": "https://tonkeeper.com/assets/tonconnect-icon.png",
+    "tondns": "tonkeeper.ton",
+    "about_url": "https://tonkeeper.com",
+    "universal_url": "https://app.tonkeeper.com/ton-connect",
+    "deepLink": "tonkeeper-tc://",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://bridge.tonapi.io/bridge"
+      },
+      {
+        "type": "js",
+        "key": "tonkeeper"
+      }
+    ],
+    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": true
       },
       {
         "name": "SignData",
@@ -919,32 +948,6 @@
         "name": "SendTransaction",
         "maxMessages": 4,
         "extraCurrencySupported": false
-      }
-    ]
-  },
-  {
-    "app_name": "telegram",
-    "name": "Telegram",
-    "image": "https://telegram.org/img/t_logo_2x.png",
-    "about_url": "https://telegram.org",
-    "universal_url": "https://t.me/sendgrams",
-    "deepLink": "tg://sendgrams",
-    "bridge": [
-      {
-        "type": "sse",
-        "url": "https://tonbridge.telegram.org"
-      }
-    ],
-    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 255,
-        "extraCurrencySupported": false
-      },
-      {
-        "name": "SignData",
-        "types": ["text", "binary", "cell"]
       }
     ]
   }
