@@ -931,6 +931,10 @@
     "deepLink": "tg://sendgrams",
     "bridge": [
       {
+        "type": "js",
+        "key": "telegram"
+      },
+      {
         "type": "sse",
         "url": "https://tonbridge.telegram.org"
       }
