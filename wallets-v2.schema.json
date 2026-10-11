@@ -168,6 +168,17 @@
             }
           ]
         }
+      },
+      "ui": {
+        "type": "object",
+        "description": "Presentation hints for the wallet picker. Ignored by non-UI consumers.",
+        "additionalProperties": false,
+        "properties": {
+          "isButtonTransparent": {
+            "type": "boolean",
+            "description": "Render this wallet's promoted button without a background fill"
+          }
+        }
       }
     },
     "required": [
