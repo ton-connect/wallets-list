@@ -2,7 +2,7 @@
   {
     "app_name": "telegram",
     "name": "Telegram",
-    "image": "https://telegram.org/img/t_logo_2x.png",
+    "image": "https://raw.githubusercontent.com/ton-connect/wallets-list/main/assets/telegram.png",
     "about_url": "https://telegram.org",
     "universal_url": "https://t.me/sendgrams",
     "deepLink": "tg://sendgrams",
