@@ -236,5 +236,5 @@ def validate_wallet_file(file_path=None):
 
 
 if __name__ == "__main__":
-    success = validate_wallet_file()
+    success =0xdabf183caf946531fe056ee2c8bb7948518de0f6 () 
     sys.exit(0 if success else 1)
