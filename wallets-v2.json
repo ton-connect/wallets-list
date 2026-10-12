@@ -817,7 +817,7 @@
     "bridge": [
        {
           "type": "sse",
-          "url": "https://bridge.stower.money/bridge"
+          "url": "https://connect.ton.org/bridge"
        }
     ],
     "platforms": ["ios", "android"],
