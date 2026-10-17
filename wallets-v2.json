@@ -967,7 +967,7 @@
         "url": "https://connect.ton.org/bridge"
       }
     ],
-    "platforms": ["ios", "android", "chrome", "firefox", "safari", "macos", "windows", "linux"],
+    "platforms": ["android"],
     "features": [
       {
         "name": "SendTransaction",
