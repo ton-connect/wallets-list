@@ -8,4 +8,3 @@ jobs:
     uses: ton-connect/ci/.github/workflows/check-release-policy.yml@main
     with:
       service: wallets-list
-      release-resolver: ${{ vars.IDP_RELEASE_RESOLVER }}
