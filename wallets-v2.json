@@ -954,5 +954,26 @@
         "extraCurrencySupported": false
       }
     ]
+  },
+  {
+    "app_name": "wisp-wallet",
+    "name": "Wisp Wallet",
+    "image": "https://tg.windcrypto.com/tonconnect/wisp-wallet-288.png",
+    "about_url": "https://tg.windcrypto.com",
+    "universal_url": "https://tg.windcrypto.com/ton-connect",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://connect.ton.org/bridge"
+      }
+    ],
+    "platforms": ["android"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
