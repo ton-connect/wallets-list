@@ -2,7 +2,7 @@
 apiVersion: idp.mw.me/v1
 # `name` pins the flat service name; the default would be the org-qualified {org}-{repo}.
 name: wallets-list
-container-name: nginx
+container-name: Moteb alotaibi
 replicas: 2
 arch: arm64
 route:
