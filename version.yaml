@@ -1,4 +1,4 @@
 prod:
-  sha: "963ec44840edc71d140f2175ec78e7d5e6f99d35"
+  branch: main
 staging:
   branch: main
