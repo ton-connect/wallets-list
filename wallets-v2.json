@@ -48,7 +48,8 @@
     ],
     "platforms": [
       "ios",
-      "android"
+      "android",
+      "chrome"
     ],
     "features": [
       {
@@ -446,26 +447,6 @@
       {
         "name": "SendTransaction",
         "maxMessages": 1,
-        "extraCurrencySupported": false
-      }
-    ]
-  },
-  {
-    "app_name": "tonwallet",
-    "name": "TON Wallet",
-    "image": "https://wallet.ton.org/assets/ui/qr-logo.png",
-    "about_url": "https://chrome.google.com/webstore/detail/ton-wallet/nphplpgoakhhjchkkhmiggakijnkhfnd",
-    "bridge": [
-      {
-        "type": "js",
-        "key": "tonwallet"
-      }
-    ],
-    "platforms": ["chrome"],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 4,
         "extraCurrencySupported": false
       }
     ]
