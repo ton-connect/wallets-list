@@ -50,9 +50,6 @@
       "ios",
       "android"
     ],
-    "ui": {
-      "isButtonTransparent": true
-    },
     "features": [
       {
         "name": "SendTransaction",
