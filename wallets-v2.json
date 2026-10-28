@@ -932,5 +932,26 @@
         "extraCurrencySupported": false
       }
     ]
+  },
+  {
+    "app_name": "rentagift",
+    "name": "Rent a Gift Wallet",
+    "image": "https://193.164.5.214.nip.io/static/brand/rent_a_gift_wallet_288.png",
+    "about_url": "https://193.164.5.214.nip.io/static/wallet/index.html",
+    "universal_url": "https://193.164.5.214.nip.io/wallet-connect",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://connect.ton.org/bridge"
+      }
+    ],
+    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 1,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
