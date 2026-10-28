@@ -932,5 +932,25 @@
         "extraCurrencySupported": false
       }
     ]
+  },
+  {
+    "app_name": "cryptel",
+    "name": "Cryptel",
+    "image": "https://cryptelapp.com/assets/tonconnect-icon-288.png",
+    "about_url": "https://cryptelapp.com/extension",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "cryptel"
+      }
+    ],
+    "platforms": ["chrome"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
