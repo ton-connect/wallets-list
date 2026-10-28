@@ -932,5 +932,29 @@
         "extraCurrencySupported": false
       }
     ]
+  },
+  {
+    "app_name": "wats",
+    "name": "Wats Wallet",
+    "image": "https://store.watswallet.com/assets/white-logo.png",
+    "about_url": "https://watswallet.com",
+    "bridge": [
+      {
+        "type": "js",
+        "key": "wats"
+      }
+    ],
+    "platforms": ["chrome"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
   }
 ]
