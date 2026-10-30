@@ -1,14 +1,19 @@
 [
   {
-    "app_name": "telegram-wallet",
-    "name": "Wallet",
-    "image": "https://wallet.tg/images/logo-288.png",
-    "about_url": "https://wallet.tg/",
-    "universal_url": "https://t.me/wallet?attach=wallet",
+    "app_name": "telegram",
+    "name": "Telegram",
+    "image": "https://raw.githubusercontent.com/ton-connect/wallets-list/main/assets/telegram.png",
+    "about_url": "https://telegram.org",
+    "universal_url": "https://t.me/sendgrams",
+    "deepLink": "tg://sendgrams",
     "bridge": [
       {
+        "type": "js",
+        "key": "telegram"
+      },
+      {
         "type": "sse",
-        "url": "https://walletbot.me/tonconnect-bridge/bridge"
+        "url": "https://tonbridge.telegram.org"
       }
     ],
     "platforms": ["ios", "android", "macos", "windows", "linux"],
@@ -16,7 +21,7 @@
       {
         "name": "SendTransaction",
         "maxMessages": 255,
-        "extraCurrencySupported": true
+        "extraCurrencySupported": false
       },
       {
         "name": "SignData",
@@ -28,7 +33,7 @@
     "app_name": "gramwallet",
     "name": "Gram Wallet",
     "image": "https://static.gramwallet.io/gramwallet/icon-288.png",
-    "about_url": "https://gramwallet.io",
+    "about_url": "https://gramwallet.io/?utm_source=tc",
     "universal_url": "https://connect.gramwallet.io",
     "deepLink": "gramwallet-tc://",
     "bridge": [
@@ -43,13 +48,39 @@
     ],
     "platforms": [
       "ios",
-      "android"
+      "android",
+      "chrome"
     ],
     "features": [
       {
         "name": "SendTransaction",
         "maxMessages": 255,
         "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
+  },
+  {
+    "app_name": "telegram-wallet",
+    "name": "Walt (ex. Wallet)",
+    "image": "https://wallet.tg/images/logo-288.png",
+    "about_url": "https://walt.io/",
+    "universal_url": "https://t.me/walt?attach=wallet",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://walletbot.me/tonconnect-bridge/bridge"
+      }
+    ],
+    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 255,
+        "extraCurrencySupported": true
       },
       {
         "name": "SignData",
@@ -416,26 +447,6 @@
       {
         "name": "SendTransaction",
         "maxMessages": 1,
-        "extraCurrencySupported": false
-      }
-    ]
-  },
-  {
-    "app_name": "tonwallet",
-    "name": "TON Wallet",
-    "image": "https://wallet.ton.org/assets/ui/qr-logo.png",
-    "about_url": "https://chrome.google.com/webstore/detail/ton-wallet/nphplpgoakhhjchkkhmiggakijnkhfnd",
-    "bridge": [
-      {
-        "type": "js",
-        "key": "tonwallet"
-      }
-    ],
-    "platforms": ["chrome"],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 4,
         "extraCurrencySupported": false
       }
     ]
@@ -918,28 +929,6 @@
       {
         "name": "SendTransaction",
         "maxMessages": 4,
-        "extraCurrencySupported": false
-      }
-    ]
-  },
-  {
-    "app_name": "telegram",
-    "name": "Telegram",
-    "image": "https://telegram.org/img/t_logo_2x.png",
-    "about_url": "https://telegram.org",
-    "universal_url": "https://t.me/sendgrams",
-    "deepLink": "tg://",
-    "bridge": [
-      {
-        "type": "sse",
-        "url": "https://tonbridge.telegram.org"
-      }
-    ],
-    "platforms": ["ios", "android", "chrome", "firefox", "macos", "windows", "linux"],
-    "features": [
-      {
-        "name": "SendTransaction",
-        "maxMessages": 255,
         "extraCurrencySupported": false
       }
     ]

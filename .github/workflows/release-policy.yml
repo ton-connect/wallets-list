@@ -1,0 +1,10 @@
+name: Release policy
+on: pull_request
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  release-policy:
+    uses: ton-connect/ci/.github/workflows/check-release-policy.yml@main
+    with:
+      service: wallets-list
