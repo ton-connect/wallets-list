@@ -956,5 +956,36 @@
         "types": ["text", "binary", "cell"]
       }
     ]
+  },
+  {
+    "app_name": "kalyx",
+    "name": "Kalyx",
+    "image": "https://kalyxwallet.com/tonconnect-icon.png",
+    "tondns": "kalyxwallet.ton",
+    "about_url": "https://kalyxwallet.com",
+    "universal_url": "https://kalyxwallet.com/ton-connect",
+    "deepLink": "kalyx://",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://connect.ton.org/bridge"
+      },
+      {
+        "type": "js",
+        "key": "kalyx"
+      }
+    ],
+    "platforms": ["android"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
   }
 ]
