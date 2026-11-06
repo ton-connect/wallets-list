@@ -956,5 +956,30 @@
         "types": ["text", "binary", "cell"]
       }
     ]
+  },
+  {
+    "app_name": "turanstars",
+    "name": "Turan Stars",
+    "image": "https://starspremium.uz/img/tc-wallet.png",
+    "about_url": "https://starspremium.uz",
+    "universal_url": "https://t.me/turanstars_bot",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://connect.ton.org/bridge"
+      }
+    ],
+    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      },
+      {
+        "name": "SignData",
+        "types": ["text", "binary", "cell"]
+      }
+    ]
   }
 ]
