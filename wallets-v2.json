@@ -956,5 +956,31 @@
         "types": ["text", "binary", "cell"]
       }
     ]
+  },
+  {
+    "app_name": "cove",
+    "name": "Cove",
+    "image": "https://raw.githubusercontent.com/ton-connect/wallets-list/main/assets/cove.png",
+    "about_url": "https://github.com/mrriaow/cove-wallet",
+    "universal_url": "https://mrriaow.github.io/cove-wallet/ton-connect/",
+    "deepLink": "cove-tc://",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://connect.ton.org/bridge"
+      }
+    ],
+    "platforms": [
+      "macos",
+      "windows",
+      "linux"
+    ],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 1,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
