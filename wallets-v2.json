@@ -962,7 +962,7 @@
     "name": "Scrypto",
     "image": "https://raw.githubusercontent.com/ton-connect/wallets-list/main/assets/scrypto.png",
     "about_url": "https://t.me/scryptoxbot",
-    "universal_url": "https://t.me/scryptoxbot",
+    "universal_url": "https://t.me/scryptoxbot/wallet",
     "bridge": [
       {
         "type": "sse",
