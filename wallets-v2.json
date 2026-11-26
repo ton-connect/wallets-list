@@ -956,5 +956,26 @@
         "types": ["text", "binary", "cell"]
       }
     ]
+  },
+  {
+    "app_name": "nezeriyawallet",
+    "name": "Nezeriya Wallet",
+    "image": "https://raw.githubusercontent.com/ton-connect/wallets-list/main/assets/nezeriyawallet.png",
+    "about_url": "https://t.me/Nezeriya_Wallet_Bot",
+    "universal_url": "https://t.me/Nezeriya_Wallet_Bot?attach=wallet",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://bridge.tonapi.io/bridge"
+      }
+    ],
+    "platforms": ["ios", "android", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
