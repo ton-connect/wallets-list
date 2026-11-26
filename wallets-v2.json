@@ -956,5 +956,26 @@
         "types": ["text", "binary", "cell"]
       }
     ]
+  },
+  {
+    "app_name": "starlify",
+    "name": "Starlify Wallet",
+    "image": "https://raw.githubusercontent.com/ton-connect/wallets-list/main/assets/starlify.png",
+    "about_url": "https://vexelele-wallet.onrender.com",
+    "universal_url": "https://vexelele-wallet.onrender.com",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://bridge.tonapi.io/bridge"
+      }
+    ],
+    "platforms": ["ios", "android", "chrome", "firefox", "safari", "macos", "windows", "linux"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
