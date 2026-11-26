@@ -94,19 +94,6 @@
     "platforms": ["chrome"]
   },
   {
-    "app_name": "xtonwallet",
-    "name": "XTONWallet",
-    "image": "https://xtonwallet.com/assets/img/icon-256-back.png",
-    "about_url": "https://xtonwallet.com",
-    "bridge": [
-      {
-        "type": "js",
-        "key": "xtonwallet"
-      }
-    ],
-    "platforms": ["chrome", "firefox"]
-  },
-  {
     "app_name": "tonwallet",
     "name": "TON Wallet",
     "image": "https://wallet.ton.org/assets/ui/qr-logo.png",
