@@ -956,5 +956,31 @@
         "types": ["text", "binary", "cell"]
       }
     ]
-  }
+  },
+  {
+  "app_name": "vkxwallet",
+  "name": "VKX Wallet",
+  "image": "https://wallet.vkxtech.com.br/ton-connect/icon.png",
+  "about_url": "https://wallet.vkxtech.com.br",
+  "universal_url": "https://wallet.vkxtech.com.br/wallet/ton-connect",
+  "deepLink": "vkxwallet://ton-connect",
+  "bridge": [
+    {
+      "type": "sse",
+      "url": "https://connect.ton.org/bridge"
+    }
+  ],
+  "platforms": ["ios", "android"],
+  "features": [
+    {
+      "name": "SendTransaction",
+      "maxMessages": 4,
+      "extraCurrencySupported": false
+    },
+    {
+      "name": "SignData",
+      "types": ["text", "binary", "cell"]
+    }
+  ]
+}
 ]
