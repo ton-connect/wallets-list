@@ -956,5 +956,30 @@
         "types": ["text", "binary", "cell"]
       }
     ]
+  },
+  {
+    "app_name": "Fearless",
+    "name": "Fearless Wallet",
+    "image": "https://raw.githubusercontent.com/ton-connect/wallets-list/main/assets/fearless.png",
+    "about_url": "https://fearlesswallet.io",
+    "universal_url": "https://fearlesswallet.io/ton-connect/",
+    "bridge": [
+      {
+        "type": "sse",
+        "url": "https://connect.ton.org/bridge"
+      },
+      {
+        "type": "js",
+        "key": "Fearless"
+      }
+    ],
+    "platforms": ["ios", "chrome"],
+    "features": [
+      {
+        "name": "SendTransaction",
+        "maxMessages": 4,
+        "extraCurrencySupported": false
+      }
+    ]
   }
 ]
